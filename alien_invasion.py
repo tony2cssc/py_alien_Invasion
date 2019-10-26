@@ -24,6 +24,7 @@ class AlienInvasion(object):
         pygame.display.set_caption("Alien Invasion")
 
         self.ship = Ship(self)
+        self.bullets = pygame.sprite.Group()
 
     def run_game(self):
         """Start the main loop for the game."""
@@ -31,6 +32,7 @@ class AlienInvasion(object):
             # Watch for keyboard and mouse events.
             self._check_event()
             self.ship.update()
+            self.bullets.update()
             self._update_screen()
 
     def _check_event(self):
