@@ -33,14 +33,17 @@ class AlienInvasion(object):
             # Watch for keyboard and mouse events.
             self._check_event()
             self.ship.update()
-            self.bullets.update()
-
-            # Get rid of bullets that have disappeared.
-            for bullet in self.bullets.copy():
-                if bullet.rect.bottom <= 0:
-                    self.bullets.remove(bullet)
-            # print(len(self.bullets))
+            self._update_bullets()()
             self._update_screen()
+
+    def _update_bullets()(self):
+        self.bullets.update()
+
+        # Get rid of bullets that have disappeared.
+        for bullet in self.bullets.copy():
+            if bullet.rect.bottom <= 0:
+                self.bullets.remove(bullet)
+        # print(len(self.bullets))
 
     def _check_event(self):
         """Respond to keypresses and mouse events."""
