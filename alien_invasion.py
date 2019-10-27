@@ -36,7 +36,7 @@ class AlienInvasion(object):
             self._update_bullets()()
             self._update_screen()
 
-    def _update_bullets()(self):
+    def _update_bullets(self):
         self.bullets.update()
 
         # Get rid of bullets that have disappeared.
