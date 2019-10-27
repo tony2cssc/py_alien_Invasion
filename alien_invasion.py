@@ -33,7 +33,7 @@ class AlienInvasion(object):
             # Watch for keyboard and mouse events.
             self._check_event()
             self.ship.update()
-            self._update_bullets()()
+            self._update_bullets()
             self._update_screen()
 
     def _update_bullets(self):
